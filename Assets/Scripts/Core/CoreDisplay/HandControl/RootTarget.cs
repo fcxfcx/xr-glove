@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using HandPosition.Filter;
-using Interface;
 using OpenCvSharp;
 using UnityEngine;
 

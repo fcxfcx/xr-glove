@@ -26,15 +26,5 @@ public class cameraControl : MonoBehaviour
             transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 0);
         }
         oldMousePosition = Input.mousePosition;
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            ExecuteEvents.Execute<IValidationMessage>(target, null, (x, y) => x.getMaxAngleInfo());
-        }
-
-        if (Input.GetKey(KeyCode.D))
-        {
-            ExecuteEvents.Execute<IValidationMessage>(target, null, (x, y) => x.getMinAngleInfo());
-        }
     }
 }
