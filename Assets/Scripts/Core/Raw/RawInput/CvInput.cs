@@ -31,21 +31,21 @@ namespace HandPosition.Input
         public long timeForPnP = 0;
         private int _detectedMarkersNum = 0;
 
-        private static readonly double[] DisArray = CameraConfiguration.GetDisArray();
-        private static readonly double[,] CameraArray = CameraConfiguration.GetCameraArray();
+        private static readonly double[] DisArray = CameraConfiguration.DIS_MATRIX;
+        private static readonly double[,] CameraArray = CameraConfiguration.CAMERA_MATRIX;
 
         private static InputArray _distortionCoefficients;
 
         private static InputArray _cameraMatrix;
 
-        private static readonly String YamlPath = CameraConfiguration.GetYamlPath();
+        private static readonly String YamlPath = CameraConfiguration.MAP_PATH;
         // Start is called before the first frame update
         void Start()
         {
             _capture = new VideoCapture(0);
             _distortionCoefficients = InputArray.Create(DisArray);
             _cameraMatrix = InputArray.Create(CameraArray);
-            _markerWorldPointsDictionary = Yaml2MarkersMap.ReadAndParse(YamlPath);
+            _markerWorldPointsDictionary = MapUtil.ReadAndParse(YamlPath);
             _frame = new Mat();
         }
 

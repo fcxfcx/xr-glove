@@ -14,10 +14,10 @@ namespace HandPosition.Filter
         private Vector3 _predictVector;
 
         //计算用数
-        private static double Q = FilterConfiguration.GetQ();
-        private static double R = FilterConfiguration.GetR();
-        private double _pDelt = FilterConfiguration.GetPDelt();
-        private double _mDelt = FilterConfiguration.GetMDelt();
+        private static double Q = FilterConfiguration.KALMAN_Q;
+        private static double R = FilterConfiguration.KALMAN_R;
+        private double _pDelt = FilterConfiguration.KALMAN_P_DELT;
+        private double _mDelt = FilterConfiguration.KALMAN_M_DELT;
         private double _gauss;
         private double _kalmanGain;
         
