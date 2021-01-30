@@ -7,7 +7,7 @@ namespace HandPosition.Filter
     {
         // 调整率，Beta越大，惯性越大
         // [0, 1]
-        private static float Beta = FilterConfiguration.GetBeta();
+        private static float Beta = FilterConfiguration.LINEAR_BETA;
     
         // 角度和旋转轴从CVInput层获取
         private float _preAngle;
