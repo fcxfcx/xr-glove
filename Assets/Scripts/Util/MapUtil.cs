@@ -1,8 +1,13 @@
 ﻿using System.Collections.Generic;
 using OpenCvSharp;
 
-public static class Yaml2MarkersMap
+public static class MapUtil
 {
+    /// <summary>
+    /// read and parse from a yaml path
+    /// </summary>
+    /// <param name="yamlPath">yaml path</param>
+    /// <returns>Map with key of marker id, and value of corner point set</returns>
     public static Dictionary<int, Point3f[]> ReadAndParse(string yamlPath)
     {
         var retDic = new Dictionary<int, Point3f[]>();
