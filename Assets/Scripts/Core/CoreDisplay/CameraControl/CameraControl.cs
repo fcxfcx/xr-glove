@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class cameraControl : MonoBehaviour
+public class CameraControl : MonoBehaviour
 {
     Vector3 oldMousePosition;
     Vector3 newMousePosition;
